@@ -103,3 +103,27 @@ body {
 .cta_add_to_card.clicked {
   background-color: #4caf50;
 }
+
+.delete_button { 
+  height: 28px;
+  width: 70px;
+  border: none;
+  background-color: #e73b3b;
+  cursor: pointer;
+}
+
+@media (max-width: 522px) {
+  .dropdown_menu {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 23rem;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 3;
+  }
+}
+

@@ -36,7 +36,7 @@ const ProductCard = () => {
 
       const handleButtonClick = () => {
         toast.success("Successfully Added!", {
-          position: "top-right",
+          position: "top-left",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -99,7 +99,13 @@ const ProductCard = () => {
                     <ul>
                       {dropdownItems.map((item) => (
                         <li className="dropdown_items" key={item.id}>
-                          {item.name} - ${item.price}
+                          <div className="dropdown_item_content">
+                            <img src={shoe} alt="Shoe" className="dropdown_item_image" />
+                            <div className="dropdown_item_info">
+                              <span className="dropdown_item_name">{item.name}</span>
+                              <span className="dropdown_item_price">${item.price}</span>
+                            </div>
+                          </div>
                           <button
                             type="button"
                             className="delete_button"
