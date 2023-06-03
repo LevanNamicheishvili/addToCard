@@ -1,2 +1,0 @@
-# addToCard
-react vite 
