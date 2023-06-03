@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+
+body { 
+  background-color: aliceblue;
+  overflow: hidden;
+}
+.container_product_card { 
+  user-select: none;
+}
+.product_card{ 
+  display: flex;
+  flex-direction: column;
+  height: 376px;
+  width: 241px;
+  border-radius: 15px;
+
+}
+.product_card .top_card { 
+  background-color: #EF3749;
+  height: 45%;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+.top_card .product_image { 
+  position: absolute;
+  top: -2.5rem;
+  width: 220px ;
+  left: 50%;
+  height: auto;
+  transform: rotate(-8deg) translate(-50%);
+  z-index: 2 ;
+}
+.product_card .product_price { 
+  color: white;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 700;
+  position: absolute;
+  bottom: .25rem ;
+  right: .75rem;
+
+}
+.product_card .bottom_card { 
+  background-color: white;
+  height: 55%;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+  
+}
+
+
+.bottom_card .product_name { 
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-top: 1.2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.bottom_card .product_description p { 
+  text-align: center;
+  font-size: 9px;
+  color: #7C7C7C;
+  font-weight: 300;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.bottom_card .product_description { 
+  max-width: 75%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.bottom_card .product_name h6 { 
+  color: #D9D9D9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.container_product_card { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.card {
-  padding: 2em;
+.bottom_card .cta_add_to_card { 
+  position: absolute;
+  bottom: 1.2rem;
+  width: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cta_add_to_card {
+  background-color: #EF3749;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.cta_add_to_card.clicked {
+  background-color: #4caf50;
 }
